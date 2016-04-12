@@ -1,4 +1,4 @@
-# trex
+# TrEx
 
 Se doreste dezvoltarea unei aplicatii Web cu rol de asistent financiar. 
 Utilizatorii autentificati vor putea tine evidenta cheltuielilor, organizate in diferite categorii (e.g., cheltuieli privitoare la subzistenta ori vizand studiile, investitii, petrecerea timpului liber). 
