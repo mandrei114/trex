@@ -14,7 +14,7 @@ Bonus: implementarea suportului pentru monede virtuale.
   1.2.	Legatura intre baza de date si aplicatie<br/>
 2.	Modulul de securitate<br/>
   2.1.	Implementarea sistemului criptare a parolelor in baza de date<br/>
-    2.1.1.	Pentru a asigura securitatea parolelor in baza de date vom salva un hash al parolei concatenata cu emailul utilizatorului. In momentul autentificarii vom genera hash al datelor de autentificare introduse de utilizator si le vom compara cu hashul existent in baza de date.<br/>
+      2.1.1.	Pentru a asigura securitatea parolelor in baza de date vom salva un hash al parolei concatenata cu emailul utilizatorului. In momentul autentificarii vom genera hash al datelor de autentificare introduse de utilizator si le vom compara cu hashul existent in baza de date.<br/>
   2.2.	Protectie impotriva sql injection cross-server scripting	<br/>
     2.2.1.	To be discused<br/>
   2.3.	Separare acces interfata publica/privata<br/>
