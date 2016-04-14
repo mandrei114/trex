@@ -41,12 +41,12 @@ Bonus: implementarea suportului pentru monede virtuale.
  
 #Tehnologii folosite
 1.Frontend<br/>
- 1.HTML<br/>
- 2.CSS<br/>
- 3.JAVASCRIPT<br/>
+  1.HTML<br/>
+  2.CSS<br/>
+  3.JAVASCRIPT<br/>
 2.Backend<br/>
- 1.PHP<br/>
+  1.PHP<br/>
 3.Baza de date<br/>
- 1.MySql/MariaDb<br/>
+  1.MySql/MariaDb<br/>
 
 
