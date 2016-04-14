@@ -40,13 +40,13 @@ Bonus: implementarea suportului pentru monede virtuale.
     *	In aceasta sectiune utilizatorul v-a putea genera rapoarte cu cheltuielile pe un anumit interval de timp si pe un anumit set de categorii selectate.<br/>
  
 #Tehnologii folosite
-1.Frontend
-  *HTML
-  *CSS
-  *JAVASCRIPT
-2.Backend
-  *PHP
-3.Baza de date
-  *MySql/MariaDb
+1.Frontend<br/>
+  *HTML<br/>
+  *CSS<br/>
+  *JAVASCRIPT<br/>
+2.Backend<br/>
+  *PHP<br/>
+3.Baza de date<br/>
+  *MySql/MariaDb<br/>
 
 
