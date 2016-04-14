@@ -14,6 +14,7 @@ Bonus: implementarea suportului pentru monede virtuale.
  1. Modul persistenta<br/>
   1.	Arhitectura tabele baza de date<br/>
   2.	Legatura intre baza de date si aplicatie<br/>
+    Legatura intre baza de date si backend va fi facuta prin PHP
  2.	Modulul de securitate<br/>
   1.	Implementarea sistemului criptare a parolelor in baza de date<br/>
     *	Pentru a asigura securitatea parolelor in baza de date vom salva un hash al parolei concatenata cu emailul utilizatorului. In momentul autentificarii vom genera hash al datelor de autentificare introduse de utilizator si le vom compara cu hashul existent in baza de date.<br/>
@@ -34,10 +35,14 @@ Bonus: implementarea suportului pentru monede virtuale.
     *	Adaugare cheltuieli personale sau de grup. In aceasta sectiune utilizatorul v-a putea sa isi adauge cheltuieli alegand a categorie si o subcategorie(din sectiunea categorii) si o suma de bani ( care v-a fi dedusa din bugetul setat in sectiunea buget).<br/>
   4.	Sectiunea categorii si subcategorii<br/>
     *	In aceasta sectiunea utilizatorul v-a putea defini categorii si subcategorii in care sa incadreze cheltuielile. Vor exista un set de categorii predefinite.<br/>
+    *	Utilizatorii vor putea de asemenea definii categorii pentru grupurile din care fac parte
   5.	Sectiunea grupuri de utilizatori<br/>
-    *	In aceasta sectiune utilizatorului i se va permite sa creeze grupuri noi de utilizatori. Se vor putea adauga utilizatori in aceste grupuri care vor trebui sa accepte in prealabil invitatia la grup. Utilizatorilor din grup le vor fi vizibile doar categoriile de baza si categoriile create in interfata grupului. Creatorul grupului va avea rolul de administrator al grupului, putand adauga sau sterge utilizatori si sterge categorii. Toti utilizatorii grupului vor putea adauga categorii. <br/>
+    *	In aceasta sectiune utilizatorului i se va permite sa creeze grupuri noi de utilizatori. Se vor putea adauga utilizatori in aceste grupuri care vor trebui sa accepte in prealabil invitatia la grup. 
+    *	Utilizatorilor din grup le vor fi vizibile doar categoriile de baza si categoriile create in interfata grupului. 
+    *	Creatorul grupului va avea rolul de administrator al grupului, putand adauga sau sterge utilizatori si sterge categorii. Toti utilizatorii grupului vor putea adauga categorii. <br/>
   6.	Sectiunea rapoartare<br/>
     *	In aceasta sectiune utilizatorul v-a putea genera rapoarte cu cheltuielile pe un anumit interval de timp si pe un anumit set de categorii selectate.<br/>
+    *	Utilizatorul va putea de asemenea genera rapoarte pentru grupurile din care face parte, pentru toti membrii grupului sau pe selectie din membrii.
  
 #Tehnologii folosite
 1. Frontend<br/>
