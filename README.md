@@ -8,6 +8,7 @@ Sistemul va oferi suport pentru crearea de grupuri de utilizatori -- de exemplu,
 Se vor genera si diferite rapoarte -- de exemplu, luna cu cele mai multe/putine achizitii de hartie si acuarele, cheltuielile de vacanta efectuate de catre un grup de prieteni, cheltuielile utilizatorilor in functie de varsta/areal geografic etc. --, disponibile in formatele HTML, XML si JSON.
 
 Bonus: implementarea suportului pentru monede virtuale.
+
 1.	Modul persistenta
 1.1.	Arhitectura tabele baza de date
 1.2.	Legatura intre baza de date si aplicatie
