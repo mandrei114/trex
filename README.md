@@ -9,6 +9,8 @@ Se vor genera si diferite rapoarte -- de exemplu, luna cu cele mai multe/putine 
 
 Bonus: implementarea suportului pentru monede virtuale.
 
+#Descrierea modulelor aplicatiei
+
  1. Modul persistenta<br/>
   1.	Arhitectura tabele baza de date<br/>
   2.	Legatura intre baza de date si aplicatie<br/>
@@ -36,3 +38,15 @@ Bonus: implementarea suportului pentru monede virtuale.
     *	In aceasta sectiune utilizatorului i se va permite sa creeze grupuri noi de utilizatori. Se vor putea adauga utilizatori in aceste grupuri care vor trebui sa accepte in prealabil invitatia la grup. Utilizatorilor din grup le vor fi vizibile doar categoriile de baza si categoriile create in interfata grupului. Creatorul grupului va avea rolul de administrator al grupului, putand adauga sau sterge utilizatori si sterge categorii. Toti utilizatorii grupului vor putea adauga categorii. <br/>
   6.	Sectiunea rapoartare<br/>
     *	In aceasta sectiune utilizatorul v-a putea genera rapoarte cu cheltuielile pe un anumit interval de timp si pe un anumit set de categorii selectate.<br/>
+ 
+#Tehnologii folosite
+1.Frontend
+  *HTML
+  *CSS
+  *JAVASCRIPT
+2.Backend
+  *PHP
+3.Baza de date
+  *MySql/MariaDb
+
+
