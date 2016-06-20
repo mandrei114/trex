@@ -24,7 +24,7 @@ $userRow=mysql_fetch_array($res);
     </div>
     <div id="right">
     	<div id="content">
-        	hi' <?php echo $userRow['EMAIL']; ?>&nbsp;<a href="logout.php?logout">Sign Out</a>
+        	hi' <a href = "accountSettings.php" ><?php echo $userRow['EMAIL']; ?> </a> &nbsp;<a href="logout.php?logout">Sign Out</a>
         </div>
     </div>
 </div>
@@ -32,6 +32,7 @@ $userRow=mysql_fetch_array($res);
 <?php include 'menu.html';?>
 
 <div id="body">
+    
     <p>Welcome - <?php echo $userRow['EMAIL']; ?></p>
 </div>
 
