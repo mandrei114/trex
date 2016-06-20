@@ -28,6 +28,8 @@ $userRow=mysql_fetch_array($res);
         </div>
     </div>
 </div>
+    
+<?php include 'menu.html';?>
 
 <div id="body">
     <p>Welcome - <?php echo $userRow['EMAIL']; ?></p>
