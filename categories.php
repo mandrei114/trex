@@ -56,7 +56,23 @@ if(!isset($_SESSION['user']))
 <script type="text/javascript">
     prepareList();
 </script>
-   
+<dialog id="window">
+    <h3>Hello World!</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, inventore!</p>
+    <button id="exit">Exit</button>
+</dialog>
+<button id="show">Show Dialog</button>
+<script>
+document.getElementById("show").addEventListener("click", showDialog);
+document.getElementById("exit").addEventListener("click", hideDialog);
+
+function showDialog() {
+    document.getElementById("window").show();
+}
+function hideDialog() {
+    document.getElementById("window").close();
+}
+</script>
 
 </div>
 
