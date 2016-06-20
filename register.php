@@ -31,6 +31,7 @@ if(isset($_POST['btn-signup']))
 			?>
 			<script>alert('successfully registered ');</script>
 			<?php
+			header('Location: index.php');
 		}
 		else
 		{

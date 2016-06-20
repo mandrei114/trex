@@ -10,8 +10,7 @@ if(!isset($_SESSION['user']))
 $res=mysql_query("SELECT * FROM user WHERE id_user=".$_SESSION['user']);
 $userRow=mysql_fetch_array($res);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        echo "caught post, calling changePersonalDetails()";
-        changePersonalDetails();
+    changePersonalDetails();
 }
 
 function changePersonalDetails(){
@@ -67,20 +66,35 @@ function changePersonalDetails(){
         <form action="accountSettings.php" method="POST">
           <fieldset>
             <legend>Personal information:</legend>
-            First name:<br>
-            <input type="text" name="firstname" value=<?php echo $userRow['FIRST_NAME']; ?>><br>
-            Last name:<br>
-            <input type="text" name="lastname" value=<?php echo $userRow['LAST_NAME']; ?>><br><br>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>First name:</td>
+                        <td><input type="text" name="firstname" value=<?php echo $userRow['FIRST_NAME']; ?>></td>
+                    </tr>
+                    <tr>
+                        <td>Last name:</td>
+                        <td><input type="text" name="lastname" value=<?php echo $userRow['LAST_NAME']; ?>></td>
+                    </tr>
+                </tbody>    
+            </table>
         </fieldset>
 
         <fieldset>
             <legend>Password:</legend>
-            New password:<br>
-            <input type="password" name="password" value=""><br>
-            Confirmation:<br>
-            <input type="password" name="confirmation" value=""><br><br>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>New password:</td>
+                        <td><input type="password" name="password" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Confirmation:</td>
+                        <td><input type="password" name="confirmation" value=""></td>
+                    </tr>
+                </tbody>    
+            </table>
         </fieldset>
-
         <input type="submit" value="Submit">
     </form>
 </div>
