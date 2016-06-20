@@ -39,6 +39,7 @@ while($row=mysql_fetch_array($result))
 $response['expenses'] = $expenses;
 
 $fp = fopen($filename, 'w');
+fwrite($fp, json_encode($response, JSON_PRETTY_PRINT));
 fclose($fp);
 
 header('Content-disposition: attachment; filename='.$filename);
