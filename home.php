@@ -27,10 +27,8 @@ $userRow=mysql_fetch_array($res);
         	hi' <a href = "accountSettings.php" ><?php echo $userRow['EMAIL']; ?> </a> &nbsp;<a href="logout.php?logout">Sign Out</a>
         </div>
     </div>
-</div>
-    
+</div>    
 <?php include 'menu.html';?>
-
 <div id="body">
     
     <p>Welcome - <?php echo $userRow['EMAIL']; ?></p>
