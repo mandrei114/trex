@@ -34,6 +34,7 @@ $userRow=mysql_fetch_array($res);
 <div id="body">
     
     <p>Welcome - <?php echo $userRow['EMAIL']; ?></p>
+    <p><a href="exportUserExpenses.php">Download your expenses as json</a></p>
 </div>
 
 </body>
