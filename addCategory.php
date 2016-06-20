@@ -59,7 +59,7 @@ function addCategory(){
                     </tr>
                     <tr>
                         <td>Enter a description:</td>
-                        <td><textarea rows="4" cols="50" name="description"></textarea></td>
+                        <td><textarea rows="4" cols="50" maxlength="201" name="description"></textarea></td>
                     </tr>
                 </tbody>    
             </table>

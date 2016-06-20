@@ -21,7 +21,7 @@ table tr,td
 	padding:15px;
 	//border:solid #e1e1e1 1px;
 }
-table tr td input
+table tr td input,textarea
 {
 	width:97%;
 	height:45px;
