@@ -7,6 +7,8 @@ if(!isset($_SESSION['user']))
 {
 	header("Location: index.php");
 }
+$res=mysql_query("SELECT * FROM user WHERE id_user=".$_SESSION['user']);
+$userRow=mysql_fetch_array($res);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -24,7 +26,7 @@ if(!isset($_SESSION['user']))
     </div>
     <div id="right">
     	<div id="content">
-        	hi' <?php echo $userRow['EMAIL']; ?>&nbsp;<a href="logout.php?logout">Sign Out</a>
+                hi' <a href = "accountSettings.php" ><?php echo $userRow['EMAIL']; ?> </a> &nbsp;<a href="logout.php?logout">Sign Out</a>
         </div>
     </div>
 </div>
