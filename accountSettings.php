@@ -50,7 +50,6 @@ function changePersonalDetails(){
     <title>Welcome - <?php echo $userRow['EMAIL']; ?></title>
     <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
-<?php include 'menu.html';?>
 <body>
     <div id="header">
         <div id="left">
@@ -62,7 +61,7 @@ function changePersonalDetails(){
             </div>
         </div>
     </div>
-
+    <?php include 'menu.html';?>
     <div id="body">
         <form action="accountSettings.php" method="POST">
           <fieldset>
