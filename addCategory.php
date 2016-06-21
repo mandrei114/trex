@@ -20,16 +20,17 @@ $maxDate = '"'.$today.'"';
 function addCategory(){
     $name = $_POST["categoryname"];
     $description = $_POST["description"];
-    $category = $_SESSION['category'];
+    $category = $_POST['category'];
+    debug_to_console($category);
     $userId = $_SESSION['user'];
     if($category == null || $category ==""){
-         mysql_query("INSERT INTO CATEGORY(CATEGORY_NAME, CATEGORY_DESCRIPTION, FK_USER) VALUES('$name', '$description', $userId)");
-    }else{
-         mysql_query("INSERT INTO CATEGORY(CATEGORY_NAME, CATEGORY_DESCRIPTION, FK_USER, ID_PARENT) VALUES('$name', '$description', $userId, $category)");
-    }
-   
-    header('Location: categories.php');
-    exit();
+     mysql_query("INSERT INTO CATEGORY(CATEGORY_NAME, CATEGORY_DESCRIPTION, FK_USER) VALUES('$name', '$description', $userId)");
+ }else{
+     mysql_query("INSERT INTO CATEGORY(CATEGORY_NAME, CATEGORY_DESCRIPTION, FK_USER, ID_PARENT) VALUES('$name', '$description', $userId, $category)");
+ }
+
+ header('Location: categories.php');
+ exit();
 }
 
 
@@ -42,15 +43,28 @@ function addCategory(){
     <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
-<div id="body">
-    <form action="addCategory.php" method="POST">
-        <fieldset>
-            <legend>Category data:</legend>
-             <table>
-                <tbody>
+    <div id="body">
+        <form action="addCategory.php" method="POST">
+            <fieldset>
+                <legend>Category data:</legend>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Parent category :</td>
+                            <td><select name="category">
+                                <option value=""></option>
+                                <?php
+                                $categories = mysql_query("SELECT * FROM CATEGORY WHERE ID_PARENT IS NULL ORDER BY CATEGORY_NAME");
+                                while($row = mysql_fetch_assoc($categories)) {
+                                    echo "<option value={$row['ID_CATEGORY']}>{$row['CATEGORY_NAME']}</option>";
+                                }
+                                ?>
+                            </select>
+                        </td>
+                    </tr>
                     <tr>
                         <td>Enter name:</td>
-                        <td><input type="text" name="categoryname"></td>
+                        <td><input type="text" name="categoryname" required></td>
                     </tr>
                     <tr>
                         <td>Enter a description:</td>
@@ -59,7 +73,7 @@ function addCategory(){
                 </tbody>    
             </table>
         </fieldset>
-         <input type="submit" value="Submit">
+        <input type="submit" value="Submit">
     </form>
     
 </form>

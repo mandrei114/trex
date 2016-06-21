@@ -35,7 +35,7 @@ function addCategoryExpense(){
                         <td>Categorie:</td>
                         <td><select name="categoryId">
                             <?php
-                                $categories = mysql_query("select * from category");
+                                $categories = mysql_query("SELECT * FROM CATEGORY ORDER BY CATEGORY_NAME");
                                 while($row = mysql_fetch_assoc($categories)) {
                                     echo "<option value={$row['ID_CATEGORY']}>{$row['CATEGORY_NAME']}</option>";
                                 }
