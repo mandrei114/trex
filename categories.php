@@ -37,7 +37,7 @@ if(!isset($_SESSION['user']))
     while($row = mysql_fetch_assoc($res))
     {
         $rowId = $row['ID_CATEGORY'];
-        echo "<li id=".$idIndex.">{$row['CATEGORY_NAME']}";
+        echo "<li id=".$idIndex.">{$row['CATEGORY_NAME']} - {$row['CATEGORY_DESCRIPTION']}";
         $idIndex = $idIndex+1;
         $subcategory=mysql_query("SELECT * FROM category where id_parent = {$row['ID_CATEGORY']}");
         echo "<ul id=".$idIndex.">";
