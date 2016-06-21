@@ -8,7 +8,6 @@ function prepareList() {
         for(j=0; j<listChildren[i].children.length; j++) {
             listChildren[i].children[j].style.display = 'none';
             listChildren[i].children[j].classList.add("collapsed");
-            listChildren[i].children[j].onclick = scopepreserver(listChildren[i].children[j].id);
         }
         listChildren[i].onclick = scopepreserver(listChildren[i].id);   
         listChildren[i].classList.add("collapsed");
@@ -39,6 +38,3 @@ function scopepreserver(id) {
 /**************************************************************/
 /* Functions to execute on loading the document               */
 /**************************************************************/
-document.addEventListener("DOMContentLoaded", function(event) { 
-   prepareList()
-});
