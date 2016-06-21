@@ -27,6 +27,13 @@
             "expenseDate": "2016-06-15",
             "expenseAmount": "15.00",
             "expenseDescription": "Sandwich"
+        },
+        {
+            "categoryName": "Categoria 3",
+            "categoryDescription": "Categoria3",
+            "expenseDate": "2016-06-21",
+            "expenseAmount": "123.00",
+            "expenseDescription": "kfc"
         }
     ]
 }
