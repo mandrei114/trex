@@ -48,9 +48,7 @@ $userRow=mysql_fetch_array($res);
                         <td>Tipul raportului:</td>
                         <td>
                             <select name="reporttype">
-                                <option value="xml">XML</option>
                                 <option value="json">JSON</option>
-                                <option value="html">HTML</option>
                             </select>
                         </td>
                     </tr>

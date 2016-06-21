@@ -96,7 +96,7 @@ function changePersonalDetails(){
             </table>
         </fieldset>
         <div class="center">
-            <input type="submit" value="Confirm">
+            <input type="submit" value="Confirma">
         </div>      
         
     </form>
