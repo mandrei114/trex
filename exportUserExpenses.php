@@ -8,13 +8,16 @@ if(!isset($_SESSION['user']))
 {
 	header("Location: index.php");
 }
+$startdate = $_POST["startDate"];
+$enddate = $_POST["endDate"];
+$reporttype = $_POST["reporttype"];
 $res=mysql_query("SELECT * FROM user WHERE id_user=".$_SESSION['user']);
 $userRow=mysql_fetch_array($res);
 $filename ="results.json";
 $ext = substr($filename, strpos($filename,'.')+1);
 
 $sql="select CA.CATEGORY_NAME, CA.CATEGORY_DESCRIPTION, EX.EXPENSE_DATE, EX.AMOUNT, EX.DESCRIPTION from EXPENSE EX join CATEGORY CA ON EX.FK_CATEGORY = CA.ID_CATEGORY".
-" WHERE EX.FK_USER = ".$_SESSION['user']." order by EX.FK_CATEGORY ASC, EX.EXPENSE_DATE ASC";
+" WHERE EX.FK_USER = ".$_SESSION['user']." and EX.EXPENSE_DATE >= '".$startdate."' AND EX.EXPENSE_DATE <= '".$enddate."' order by EX.FK_CATEGORY ASC, EX.EXPENSE_DATE ASC";
 
 
 $response = array();
