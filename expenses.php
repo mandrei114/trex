@@ -36,7 +36,7 @@ if(!isset($_SESSION['user']))
     echo "<th>Descriere categorie<th>";
     echo "<th>Data cheltuiala<th>";
     echo "<th>Suma cheltuita<th>";
-    $res=mysql_query("select * from expense join category on expense.fk_category = category.id_category where fk_user = ".$_SESSION['user']);
+    $res=mysql_query("select * from expense ex join category ca on ex.fk_category = ca.id_category where ex.fk_user = ".$_SESSION['user']);
     $idIndex = 1;
     while($row = mysql_fetch_assoc($res))
     {
