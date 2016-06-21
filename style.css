@@ -21,7 +21,7 @@ table tr,td
 	padding:15px;
 	//border:solid #e1e1e1 1px;
 }
-table tr td input,textarea
+table tr td input,textarea,select
 {
 	width:97%;
 	height:45px;
@@ -111,7 +111,8 @@ table tr td a
 #body
 {
 	text-align:center;
-	margin-top:150px;
+	margin-top:30px;
+    margin-bottom: 30px;
 	font-family:Verdana, Geneva, sans-serif;
 	font-size:36px;
 }
@@ -175,6 +176,41 @@ table tr td a
     font-weight:normal;
 }
 
-.first{
-	z-index:99999999;
+
+
+#meniu {
+    width: 100%;
+    text-align: center;
+}
+
+.center {
+    margin: auto;
+    width: 150px;
+    padding: 10px;
+    font-size: 20px;
+}
+.center-fieldset {
+    margin: auto;
+    width: 500px;
+    padding: 10px;
+    font-size: 20px;
+}
+.window-content{
+    width: 50%;
+    margin: 0 auto;
+    text-lign:center;
+}
+
+button, input[type="submit"]{
+     background-color: white; /* Green */
+    border: none;
+    color: black;
+    padding: 3px 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border:1px solid black;
 }

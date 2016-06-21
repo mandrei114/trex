@@ -62,22 +62,22 @@ if(isset($_POST['btn-signup']))
 <form method="post">
 <table align="center" width="30%" border="0">
 <tr>
-<td><input type="text" name="firstname" placeholder="First Name" required /></td>
+<td><input type="text" name="firstname" placeholder="Nume" required /></td>
 </tr>
 <tr>
-<td><input type="text" name="lastname" placeholder="Last Name" required /></td>
+<td><input type="text" name="lastname" placeholder="Prenume" required /></td>
 </tr>
 <tr>
-<td><input type="email" name="email" placeholder="Your Email" required /></td>
+<td><input type="email" name="email" placeholder="E-mail" required /></td>
 </tr>
 <tr>
-<td><input type="password" name="pass" placeholder="Your Password" required /></td>
+<td><input type="password" name="pass" placeholder="Parola" required /></td>
 </tr>
 <tr>
-<td><button type="submit" name="btn-signup">Sign Me Up</button></td>
+<td><button type="submit" name="btn-signup">Inregistrare</button></td>
 </tr>
 <tr>
-<td><a href="index.php">Sign In Here</a></td>
+<td><a href="index.php">Autentificare</a></td>
 </tr>
 </table>
 </form>

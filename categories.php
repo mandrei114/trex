@@ -26,12 +26,13 @@ $userRow=mysql_fetch_array($res);
     </div>
     <div id="right">
     	<div id="content">
-                hi' <a href = "accountSettings.php" ><?php echo $userRow['EMAIL']; ?> </a> &nbsp;<a href="logout.php?logout">Sign Out</a>
+                Buna <a href = "accountSettings.php" ><?php echo $userRow['EMAIL']; ?> </a> &nbsp;<a href="logout.php?logout">Delogare</a>
         </div>
     </div>
 </div>
     
 <?php include 'menu.html';?>
+    <div class="center">
 <?php
     echo "<ul id=\"expList\">";
     $res=mysql_query("SELECT * FROM category where id_parent is null");
@@ -39,7 +40,7 @@ $userRow=mysql_fetch_array($res);
     while($row = mysql_fetch_assoc($res))
     {
         $rowId = $row['ID_CATEGORY'];
-        echo "<li id=".$idIndex.">{$row['CATEGORY_NAME']} - {$row['CATEGORY_DESCRIPTION']}";
+        echo "<li id=".$idIndex.">{$row['CATEGORY_NAME']}";
         $idIndex = $idIndex+1;
         $subcategory=mysql_query("SELECT * FROM category where id_parent = {$row['ID_CATEGORY']}");
         echo "<ul id=".$idIndex.">";
@@ -55,15 +56,17 @@ $userRow=mysql_fetch_array($res);
     echo "</ul>";
     
 ?>
+    </div>
 <script type="text/javascript">
     prepareList();
 </script>
-<dialog id="window">
-    <button id="exit">Exit</button>
+<dialog id="window" class="window-content">
     <?php include_once 'addCategory.php';?>
 </dialog>
-<button id="add_category">Add category</button>
-<script>
+    <div class="center">
+    <button id="add_category">Adauga categorie</button>
+    </div>
+    <script>
 document.getElementById("add_category").addEventListener("click", showAddExpenses);
 document.getElementById("exit").addEventListener("click", hideDialog);
 

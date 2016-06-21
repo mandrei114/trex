@@ -24,7 +24,7 @@ $userRow=mysql_fetch_array($res);
     </div>
     <div id="right">
     	<div id="content">
-        	hi' <a href = "accountSettings.php" ><?php echo $userRow['EMAIL']; ?> </a> &nbsp;<a href="logout.php?logout">Sign Out</a>
+        	Buna <a href = "accountSettings.php" ><?php echo $userRow['EMAIL']; ?> </a> &nbsp;<a href="logout.php?logout">Delogare</a>
         </div>
     </div>
 </div>    
@@ -32,8 +32,8 @@ $userRow=mysql_fetch_array($res);
 <div id="body">
     
    <form action="exportUserExpenses.php" method="POST">
-        <fieldset>
-            <legend>Export detail:</legend>
+        <fieldset class="center-fieldset">
+            <legend>Detalii export:</legend>
              <table>
                 <tbody>
                     <tr>
@@ -57,7 +57,9 @@ $userRow=mysql_fetch_array($res);
                 </tbody>    
             </table>
         </fieldset>
+       <div class="center">
          <input type="submit" value="Descarca raport">
+       </div>
     </form>
 </div>
 

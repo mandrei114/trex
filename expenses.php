@@ -26,14 +26,14 @@ $userRow=mysql_fetch_array($res);
     </div>
     <div id="right">
     	<div id="content">
-                hi' <a href = "accountSettings.php" ><?php echo $userRow['EMAIL']; ?> </a> &nbsp;<a href="logout.php?logout">Sign Out</a>
+                Buna <a href = "accountSettings.php" ><?php echo $userRow['EMAIL']; ?> </a> &nbsp;<a href="logout.php?logout">Delogare</a>
         </div>
     </div>
 </div>
     
 <?php include 'menu.html';?>
 <?php
-    echo "<table id=\"expTable\">";
+    echo "<table id=\"meniu\">";
     echo "<th>Nume categorie<th>";
     echo "<th>Descriere categorie<th>";
     echo "<th>Data cheltuiala<th>";
@@ -58,14 +58,19 @@ $userRow=mysql_fetch_array($res);
     
 ?>
 
-<dialog id="window">
+<dialog id="window" class="window-content">
     <?php
         include_once 'addCategoryExpense.php';
     ?>
     
-    <button id="exit">Exit</button>
+    
 </dialog>
-<button id="show">Show Dialog</button>
+   
+     <div class="center">
+        <button style="width:100%;" id="show" >Adauga cheltuiala</button>
+    </div>
+    
+    
 <script>
 document.getElementById("show").addEventListener("click", showDialog);
 document.getElementById("exit").addEventListener("click", hideDialog);

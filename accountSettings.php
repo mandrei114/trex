@@ -57,45 +57,48 @@ function changePersonalDetails(){
         </div>
         <div id="right">
             <div id="content">
-                hi' <a href = "accountSettings.php" ><?php echo $userRow['EMAIL']; ?> </a> &nbsp;<a href="logout.php?logout">Sign Out</a>
+                Buna <a href = "accountSettings.php" ><?php echo $userRow['EMAIL']; ?> </a> &nbsp;<a href="logout.php?logout">Delogare</a>
             </div>
         </div>
     </div>
     <?php include 'menu.html';?>
     <div id="body">
         <form action="accountSettings.php" method="POST">
-          <fieldset>
-            <legend>Personal information:</legend>
+          <fieldset class="center-fieldset">
+            <legend>Informatii personale:</legend>
             <table>
                 <tbody>
                     <tr>
-                        <td>First name:</td>
+                        <td>Nume:</td>
                         <td><input type="text" name="firstname" value=<?php echo $userRow['FIRST_NAME']; ?>></td>
                     </tr>
                     <tr>
-                        <td>Last name:</td>
+                        <td>Prenume:</td>
                         <td><input type="text" name="lastname" value=<?php echo $userRow['LAST_NAME']; ?>></td>
                     </tr>
                 </tbody>    
             </table>
         </fieldset>
 
-        <fieldset>
-            <legend>Password:</legend>
+        <fieldset class="center-fieldset">
+            <legend>Parola:</legend>
             <table>
                 <tbody>
                     <tr>
-                        <td>New password:</td>
+                        <td>Parola noua:</td>
                         <td><input type="password" name="password" value=""></td>
                     </tr>
                     <tr>
-                        <td>Confirmation:</td>
+                        <td>Confirmare:</td>
                         <td><input type="password" name="confirmation" value=""></td>
                     </tr>
                 </tbody>    
             </table>
         </fieldset>
-        <input type="submit" value="Submit">
+        <div class="center">
+            <input type="submit" value="Confirm">
+        </div>      
+        
     </form>
 </div>
 </body>

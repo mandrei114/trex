@@ -25,7 +25,7 @@ if(isset($_POST['btn-login']))
 	if($count == 1 && $row['password']==md5($upass))
 	{
 		$_SESSION['user'] = $row['id_user'];
-		header("Location: home.php");
+		header("Location: expenses.php");
 	}
 	else
 	{
@@ -49,16 +49,16 @@ if(isset($_POST['btn-login']))
 <form method="post">
 <table align="center" width="30%" border="0">
 <tr>
-<td><input type="text" name="email" placeholder="Your Email" required /></td>
+<td><input type="text" name="email" placeholder="E-mail" required /></td>
 </tr>
 <tr>
-<td><input type="password" name="pass" placeholder="Your Password" required /></td>
+<td><input type="password" name="pass" placeholder="Parola" required /></td>
 </tr>
 <tr>
-<td><button type="submit" name="btn-login">Sign In</button></td>
+<td><button type="submit" name="btn-login">Autentificare</button></td>
 </tr>
 <tr>
-<td><a href="register.php">Sign Up Here</a></td>
+<td><a href="register.php">Inregistrare</a></td>
 </tr>
 </table>
 </form>

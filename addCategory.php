@@ -45,12 +45,12 @@ function addCategory(){
 <body>
     <div id="body">
         <form action="addCategory.php" method="POST">
-            <fieldset>
-                <legend>Category data:</legend>
+            <fieldset class="center-fieldset">
+                <legend>Date categorie:</legend>
                 <table>
                     <tbody>
                         <tr>
-                            <td>Parent category :</td>
+                            <td>Categorie parinte :</td>
                             <td><select name="category">
                                 <option value=""></option>
                                 <?php
@@ -63,11 +63,11 @@ function addCategory(){
                         </td>
                     </tr>
                     <tr>
-                        <td>Enter name:</td>
+                        <td>Nume categorie:</td>
                         <td><input type="text" name="categoryname" required></td>
                     </tr>
                     <tr>
-                        <td>Enter a description:</td>
+                        <td>Descriere:</td>
                         <td><textarea rows="4" cols="50" maxlength="201" name="description"></textarea></td>
                     </tr>
                 </tbody>    

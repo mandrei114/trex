@@ -26,38 +26,23 @@ function addCategoryExpense(){
 <html xmlns="http://www.w3.org/1999/xhtml">
 <body>
 <div id="body">
-    <form action="addCategoryExpense.php" method="POST">
-        <fieldset class="center-fieldset">
-            <legend>Expense data:</legend>
+    <form action="addUserGroup.php" method="POST">
+        <fieldset>
+            <legend>Detalii grup:</legend>
              <table>
                 <tbody>
                     <tr>
-                        <td>Categorie:</td>
-                        <td><select name="categoryId">
-                            <?php
-                                $categories = mysql_query("SELECT * FROM CATEGORY ORDER BY CATEGORY_NAME");
-                                while($row = mysql_fetch_assoc($categories)) {
-                                    echo "<option value={$row['ID_CATEGORY']}>{$row['CATEGORY_NAME']}</option>";
-                                }
-                            ?>
-                        </select></td>
+                        <td>Nume grup:</td>
+                        <td><input type="text" name="groupname"></td>
                     </tr>
                     <tr>
-                        <td>Suma cheltuita:</td>
-                        <td><input type="number" name="expensevalue" min="1" step="0.1"></td>
-                    </tr>
-                    <tr>
-                        <td>Data:</td>
-                        <td><input type="date" name="expensedate" value=<?php echo $maxDate; ?> max=<?php echo $maxDate; ?> required></td>
-                    </tr>
-                    <tr>
-                        <td>Descriere:</td>
-                        <td><textarea rows="4" cols="50" maxlength="201" name="description"></textarea></td>
+                        <td>Descriere grup:</td>
+                        <td><input type="text" name="groupdescription"></td>
                     </tr>
                 </tbody>    
             </table>
         </fieldset>
-         <input type="submit" value="Submit">
+         <input type="submit" value="Salveaza grup">
     </form>
     
 </form>

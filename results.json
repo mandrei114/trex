@@ -1,18 +1,3 @@
 {
-    "expenses": [
-        {
-            "categoryName": "Haine",
-            "categoryDescription": "Haine",
-            "expenseDate": "2016-06-16",
-            "expenseAmount": "33.00",
-            "expenseDescription": "pantaloni"
-        },
-        {
-            "categoryName": "Haine",
-            "categoryDescription": "Haine",
-            "expenseDate": "2016-06-21",
-            "expenseAmount": "22.00",
-            "expenseDescription": "Geaca"
-        }
-    ]
+    "expenses": []
 }
