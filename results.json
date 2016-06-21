@@ -1,3 +1,32 @@
 {
-    "expenses": []
+    "expenses": [
+        {
+            "categoryName": "Categorie 1",
+            "categoryDescription": "Descriere categorie 1",
+            "expenseDate": "2016-06-18",
+            "expenseAmount": "125.00",
+            "expenseDescription": "Mancare"
+        },
+        {
+            "categoryName": "Categorie 1",
+            "categoryDescription": "Descriere categorie 1",
+            "expenseDate": "2016-06-18",
+            "expenseAmount": "11.00",
+            "expenseDescription": "Breloc"
+        },
+        {
+            "categoryName": "Category 2 ",
+            "categoryDescription": "Desc category 2",
+            "expenseDate": "2016-06-14",
+            "expenseAmount": "23.00",
+            "expenseDescription": "Iesire"
+        },
+        {
+            "categoryName": "Category 2 ",
+            "categoryDescription": "Desc category 2",
+            "expenseDate": "2016-06-15",
+            "expenseAmount": "15.00",
+            "expenseDescription": "Sandwich"
+        }
+    ]
 }

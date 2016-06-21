@@ -20,10 +20,18 @@ $maxDate = '"'.$today.'"';
 function addCategory(){
     $name = $_POST["categoryname"];
     $description = $_POST["description"];
+    $category = $_SESSION['category'];
     $userId = $_SESSION['user'];
-    mysql_query("INSERT INTO CATEGORY(CATEGORY_NAME, CATEGORY_DESCRIPTION, FK_USER) VALUES('$name', '$description', $userId)");
-    debug_to_console("INSERT INTO CATEGORY(NAME, DESCRIPTION, FK_USER) VALUES('$name', '$description', $userId)");
+    if($category == null || $category ==""){
+         mysql_query("INSERT INTO CATEGORY(CATEGORY_NAME, CATEGORY_DESCRIPTION, FK_USER) VALUES('$name', '$description', $userId)");
+    }else{
+         mysql_query("INSERT INTO CATEGORY(CATEGORY_NAME, CATEGORY_DESCRIPTION, FK_USER, ID_PARENT) VALUES('$name', '$description', $userId, $category)");
+    }
+   
+    header('Location: categories.php');
+    exit();
 }
+
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -34,19 +42,6 @@ function addCategory(){
     <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
-    <div id="header">
-       <div id="left">
-        <label>Trex</label>
-    </div>
-    <div id="right">
-    	<div id="content">
-           hi' <a href = "accountSettings.php" ><?php echo $userRow['EMAIL']; ?> </a> &nbsp;<a href="logout.php?logout">Sign Out</a>
-       </div>
-   </div>
-</div>
-
-<?php include 'menu.html';?>
-
 <div id="body">
     <form action="addCategory.php" method="POST">
         <fieldset>

@@ -36,8 +36,8 @@ if(!isset($_SESSION['user']))
     $idIndex = 1;
     while($row = mysql_fetch_assoc($res))
     {
-        
-        echo "<li id=".$idIndex.">{$row['CATEGORY_NAME']}<button type=\"button\">Adauga subcategorie</button>";
+        $rowId = $row['ID_CATEGORY'];
+        echo "<li id=".$idIndex.">{$row['CATEGORY_NAME']}";
         $idIndex = $idIndex+1;
         $subcategory=mysql_query("SELECT * FROM category where id_parent = {$row['ID_CATEGORY']}");
         echo "<ul id=".$idIndex.">";
@@ -57,21 +57,24 @@ if(!isset($_SESSION['user']))
     prepareList();
 </script>
 <dialog id="window">
-    <h3>Hello World!</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, inventore!</p>
     <button id="exit">Exit</button>
+    <?php include_once 'addCategory.php';?>
 </dialog>
-<button id="show">Show Dialog</button>
+<button id="add_category">Add category</button>
 <script>
-document.getElementById("show").addEventListener("click", showDialog);
+document.getElementById("add_category").addEventListener("click", showAddExpenses);
 document.getElementById("exit").addEventListener("click", hideDialog);
 
-function showDialog() {
+function showAddExpenses() {
+    document.getElementById("window").show();
+}
+function showAddSubExpenses() {
     document.getElementById("window").show();
 }
 function hideDialog() {
     document.getElementById("window").close();
 }
+
 </script>
 
 </div>
